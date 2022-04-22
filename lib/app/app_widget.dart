@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_controller.dart';
 import 'home_page.dart';
 
 class App extends StatelessWidget {
@@ -7,10 +8,20 @@ class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
-      title: 'Welcome to Flutter',
-      home: const HomePage(),
+    return AnimatedBuilder(
+      animation: AppController.shared,
+      builder: (context, child) {
+        return MaterialApp(
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            brightness: AppController.shared.isDartTheme
+                ? Brightness.dark
+                : Brightness.light,
+          ),
+          title: 'Welcome to Flutter',
+          home: const HomePage(),
+        );
+      },
     );
   }
 }
