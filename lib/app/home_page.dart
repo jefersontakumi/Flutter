@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'app_controller.dart';
 import 'Widget/custom_switch.dart';
@@ -23,11 +24,43 @@ class HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: [
             Text('Teste'),
             CustomSwitch(),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            ),
+            Text('Texto'),
+            Container(
+              height: 50,
+            )
           ],
         ),
       ),
