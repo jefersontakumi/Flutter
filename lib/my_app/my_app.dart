@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:startup_namer/my_app/random_words.dart';
+import 'package:startup_namer/my_app/random_words_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Welcome to Flutter',
-      home: RandomWords(),
+      home: RandomWordsPage(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:startup_namer/login/login_page.dart';
 import 'app_controller.dart';
-import 'home_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class App extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          home: HomePage(),
+          home: const LoginPage(),
         );
       },
     );
