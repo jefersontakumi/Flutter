@@ -18,8 +18,7 @@ class App extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          title: 'Welcome to Flutter',
-          home: const HomePage(),
+          home: HomePage(),
         );
       },
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_controller.dart';
+import 'Widget/custom_switch.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,21 +16,12 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Titulo')),
+      appBar: AppBar(
+        title: const Text('Home Page'),
+        actions: [CustomSwitch()],
+      ),
       body: Center(
-          child: Switch(
-        value: AppController.shared.isDartTheme,
-        onChanged: (value) {
-          setState(() {
-            AppController.shared.changeTheme();
-          });
-        },
-      )),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          AppController.shared.changeTheme();
-        },
+        child: CustomSwitch(),
       ),
     );
   }
