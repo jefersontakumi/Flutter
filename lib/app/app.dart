@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:startup_namer/login/login_page.dart';
+import 'package:startup_namer/app/home_page.dart';
+import 'package:startup_namer/app/login_page.dart';
 import 'app_controller.dart';
 
 class App extends StatelessWidget {
@@ -18,7 +19,11 @@ class App extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          home: const LoginPage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );
