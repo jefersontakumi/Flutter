@@ -25,10 +25,10 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 200,
-                  height: 200,
-                  child: Image.network(
-                    'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
+                  width: 100,
+                  height: 100,
+                  child: Image.asset(
+                    'assets/images/git.png',
                   ),
                 ),
                 const SizedBox(
