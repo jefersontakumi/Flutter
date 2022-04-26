@@ -24,6 +24,16 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width: 200,
+                  height: 200,
+                  child: Image.network(
+                    'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 TextField(
                   onChanged: (text) {
                     email = text;
@@ -31,10 +41,10 @@ class _LoginPageState extends State<LoginPage> {
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: 'E-mail',
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextField(
@@ -47,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 RaisedButton(
