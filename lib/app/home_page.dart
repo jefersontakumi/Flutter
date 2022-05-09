@@ -46,7 +46,9 @@ class HomePageState extends State<HomePage> {
       ),
       appBar: AppBar(
         title: const Text('Home Page'),
-        actions: [CustomSwitch()],
+        actions: [
+          CustomSwitch(),
+        ],
       ),
       body: Container(
         width: double.infinity,
