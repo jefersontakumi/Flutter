@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
-import 'app_controller.dart';
 import 'Widget/custom_switch.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,8 +18,11 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-                currentAccountPicture: Image.network(
-                    'https://tadarak.com/wp-content/uploads/2021/02/Male-Placeholder.png'),
+                currentAccountPicture: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: Image.network(
+                      'https://tadarak.com/wp-content/uploads/2021/02/Male-Placeholder.png'),
+                ),
                 accountName: Text('Jeferson Takumi'),
                 accountEmail: Text('jefersontakumi@gmail.com')),
             ListTile(
