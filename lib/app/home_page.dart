@@ -18,8 +18,7 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-                currentAccountPicture: ClipRRect(
-                  borderRadius: BorderRadius.circular(40),
+                currentAccountPicture: ClipOval(
                   child: Image.network(
                       'https://tadarak.com/wp-content/uploads/2021/02/Male-Placeholder.png'),
                 ),
